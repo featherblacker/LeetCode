@@ -5,13 +5,9 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        for i in range(len(nums) - 1):
-            for j in range(i + 1, len(nums)):
-                if nums[j] == target - nums[i]:
-                    return [i, j]
-    def twoSum1(self, nums, target):
-        res = []
+        dic = {}
         for i in range(len(nums)):
-            if target-nums[i] in res:
-                return [i, res.index(target-nums[i])]
-            res.append(nums[i])
+            if target-nums[i] in dic:
+                return [dic[target-nums[i]], i]
+            else:
+                dic[nums[i]] = i
