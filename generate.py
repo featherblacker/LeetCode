@@ -9,4 +9,4 @@ PATH = './Medium'
 GIT = 'https://github.com/featherblacker/LeetCode/tree/master/'
 files = os.listdir(PATH)
 for folder in files:
-    print("["+str(folder)+"]("+GIT+PATH[2:]+"/{})".format(str(folder)))
+    print("|["+str(folder)+"]("+GIT+PATH[2:]+"/{})".format(str(folder))+"|{}|".format(PATH[2:]))
