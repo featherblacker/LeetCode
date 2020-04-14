@@ -3,6 +3,7 @@
 ![](https://img.shields.io/badge/Algorithm-LeetCode-green)
 ![](https://img.shields.io/badge/Python-Python3-yellow)
 
+N数相加类型题：001，002，015，016，018，167，279，454，560，653
 
 No. | Difficulty |
 |:----: | :---: |
