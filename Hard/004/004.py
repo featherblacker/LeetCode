@@ -67,8 +67,8 @@ class Solution2(object):
         if k == 1:
             return min(nums1[start1], nums2[start2])
 
-        i = start1 + min(len1, k / 2) - 1
-        j = start2 + min(len2, k / 2) - 1
+        i = int(start1 + min(len1, k / 2) - 1)
+        j = int(start2 + min(len2, k / 2) - 1)
         # 较小的那一组 list 向后顺延 k/2
         if (nums1[i] > nums2[j]):
             return self.getKth(nums1, start1, end1, nums2, j + 1, end2, k - (j - start2 + 1))
