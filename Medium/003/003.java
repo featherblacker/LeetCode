@@ -18,4 +18,22 @@ class Solution {
         }
         return maxLength;
     }
+    
+    public int lengthOfLongestSubstring2(String s) {
+        Set<Character> set = new HashSet<>();
+        int maxLength = 0;
+        int right = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (right!=0){
+                set.remove(s.charAt(i-1));
+            }
+            while (right<s.length() &&!set.contains(s.charAt(right))){
+                set.add(s.charAt(right));
+                right++;
+            }
+            maxLength = Math.max(maxLength, right-i);
+
+        }
+        return maxLength;
+    }
 }
